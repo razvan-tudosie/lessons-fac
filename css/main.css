@@ -1,0 +1,15 @@
+:root {
+    --color: green;
+    --my-font-size: 18px;
+}
+
+
+html {
+    font-size: var(--my-font-size);
+}
+
+div.box {
+    font-size: 1.5rem;
+    width: var(--width);
+    background-color: var(--color);
+}
