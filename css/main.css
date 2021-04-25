@@ -1,15 +1,218 @@
-:root {
-    --color: green;
-    --my-font-size: 18px;
+* {
+    margin:0px;
+    padding:0px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+:root {
+    --color-one: #0C2991;
+    --color-two: #393939;
+    --color-three: #EDF1FF;
+    --color-four: #B0B9D9;
+    --base-font-size: 16px;
+    --max-width: 1125px;
+}
 
 html {
-    font-size: var(--my-font-size);
+    font-size: var(--base-font-size);
 }
 
-div.box {
-    font-size: 1.5rem;
-    width: var(--width);
-    background-color: var(--color);
+body {
+    font-family: 'Roboto', sans-serif;
 }
+
+#nav-facultate a {
+    color: #fff; /* de sters */
+}
+
+#nav-facultate {
+    background-color: var(--color-two);
+}
+
+    #nav-facultate .nav-facultate-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display:flex;
+        justify-content: flex-end;
+        opacity: 0.5;
+        padding: 0 16px;
+    }
+
+    #nav-facultate .nav-facultate-container .nav-facultate-left {
+        margin-right: auto;
+        padding: 8px 8px 8px 0px;
+        text-decoration: none;
+    }
+
+    #nav-facultate .nav-facultate-container .nav-facultate-right {
+        list-style-type: none;
+    }
+
+        #nav-facultate .nav-facultate-container .nav-facultate-right li {
+            display: inline-block;
+        }
+
+        #nav-facultate .nav-facultate-container .nav-facultate-right li a {
+            margin-right: auto;
+            padding: 8px;
+            text-decoration: none;
+            display:block;
+            margin-right: 10px;
+        }
+
+        #nav-facultate .nav-facultate-container .nav-facultate-right li:last-child a {
+            padding-right:0px;
+            margin-right: 0px;
+        }
+
+
+#nav-main {
+    background-color: var(--color-one);
+    padding-top:16px;
+    min-height: 40px;
+}
+
+    #nav-main .toggleButton {
+        position:relative;
+        height:60px;
+        left:16px;
+    }
+
+    #nav-main .toggleButton span,
+    #nav-main .toggleButton span::before,
+    #nav-main .toggleButton span::after {
+        position:absolute;
+        width: 42px;
+        height:5px;
+        background-color: #fff;
+        display:block;
+        border-radius: 3px;
+        left:0px;
+        top: 0px;
+    }
+
+    #nav-main .toggleButton span::before {
+        content: '';
+        top: 10px;
+    }
+
+    #nav-main .toggleButton span::after {
+        content: '';
+        top: 20px;
+    }
+
+    #nav-main input.toggle:checked ~ .nav-main-container {
+        display: block;
+    }
+
+    #nav-main input.toggle {
+        position:absolute;
+        left:-9999px;
+    }
+
+    #nav-main .nav-main-container {
+        background-color: var(--color-three);
+        margin-top:40px;
+        display:none;
+    }
+
+    #nav-main .nav-main-container .nav-left {
+        display:none;
+    }
+
+    #nav-main .nav-main-container .nav-center li {
+        border-bottom: 1px solid var(--color-four);
+    }
+
+    #nav-main .nav-main-container .nav-center li a {
+        display:block;
+        padding: 24px 8px;
+        text-decoration: none;
+        color: #000;
+        font-weight: 100;
+        font-size: 1.125rem
+    }
+
+
+@media screen and (min-width: 960px) {
+
+    .toggleButton {
+        display:none;
+    }
+
+    #nav-main {
+        padding-top:0px;
+    }
+
+    #nav-main .nav-main-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display:flex;
+        padding: 0 16px;
+        background-color: transparent;
+    }
+
+        #nav-main .nav-main-container .nav-left {
+            margin-right: auto;
+            display: block;
+            display: flex;
+            justify-content: center;
+        }
+
+        #nav-main .nav-main-container .nav-center li {
+            display:inline-block;
+            border: none;
+        }
+
+            #nav-main .nav-main-container .nav-center li a {
+                color:#fff;
+            }
+
+        #nav-main .nav-main-container .nav-right {
+            margin-left: auto;
+        }
+
+            #nav-main .nav-main-container .nav-right li {
+                display:inline-block;
+                list-style-type: none;
+                margin-top: 12px;
+            }
+            #nav-main .nav-main-container .nav-right li.search a {
+                padding: 20px;
+                vertical-align: middle;
+            }
+
+}
+
+
+.btn {
+    color: var(--color-one);
+    text-decoration: none;
+    background-color: #fff;
+    padding: 12px 24px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
